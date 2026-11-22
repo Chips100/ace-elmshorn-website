@@ -16,7 +16,33 @@
 
     <style>
         :root {
-            --bs-bg-1: yellow; /* ACE yellow for default background color in Bootstrap. */
+            --bs-bg-1: #ffcb33; /* ACE yellow for default background color in Bootstrap. */
+            --bs-theme-fg: black;
+            --bs-theme-fg-emphasis: black;
+        }
+        .navbar .btn-icon {
+            --bs-btn-color: black;
+        }
+        dialog.drawer[open] a {
+            --bs-theme-fg: var(--bs-navbar-active-color);
+            --bs-theme-fg-emphasis: var(--bs-nav-link-hover-color);
+        }
+        a.price-tag {
+            margin-block-start: 5rem;
+            margin-block-end: 2rem;
+            left: auto;
+            right: 2rem;
+            border-radius: 50%;
+            width: 7.5rem;
+            height: 7.5rem;
+            rotate: -15deg;
+            text-align: center;
+            padding-top: 1.5rem;
+            background: var(--bs-bg-1);
+        }
+        a.price-tag .price-value {
+            font-size: 1.7rem;
+            line-height: 0.5rem;
         }
     </style>
 </head>
@@ -50,6 +76,9 @@
         </div>
     </nav>
 
+    <a href="#" class="fixed-bottom theme-primary-bg w-5 h-5 card hover-lift price-tag text-decoration-none">
+        <div class="card-body"><strong class="price-value">2,50&nbsp;€</strong><small>pro Monat</small></div>
+    </a>
 
     <div>
         <strong>Diese Seite ist kein offizielles Angebot des AC Einigkeit Elmshorn e.V. und dient nur zu Evaluationszwecken!</strong>
