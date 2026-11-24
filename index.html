@@ -16,17 +16,21 @@
 
     <style>
         :root {
-            --bs-bg-1: #ffcb33; /* ACE yellow for default background color in Bootstrap. */
+            --bs-bg-1: #ffcb33;
+            /* ACE yellow for default background color in Bootstrap. */
             --bs-theme-fg: black;
             --bs-theme-fg-emphasis: black;
         }
+
         .navbar .btn-icon {
             --bs-btn-color: black;
         }
+
         dialog.drawer[open] a {
             --bs-theme-fg: var(--bs-navbar-active-color);
             --bs-theme-fg-emphasis: var(--bs-nav-link-hover-color);
         }
+
         a.price-tag {
             margin-block-start: 5rem;
             margin-block-end: 2rem;
@@ -41,6 +45,7 @@
             background: var(--bs-bg-1);
             color: var(--bs-theme-fg);
         }
+
         a.price-tag .price-value {
             font-size: 1.7rem;
             line-height: 0.5rem;
@@ -53,7 +58,8 @@
     <nav class="navbar md:navbar-expand bg-1 fg-2">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/ace-logo.png" alt="AC Einigkeit Elmshorn Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="images/ace-logo.png" alt="AC Einigkeit Elmshorn Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
                 AC Einigkeit Elmshorn
             </a>
             <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
@@ -77,13 +83,56 @@
         </div>
     </nav>
 
+    <!-- Price Tag in corner. -->
     <a href="#" class="fixed-bottom theme-primary-bg w-5 h-5 card hover-lift price-tag text-decoration-none">
         <div class="card-body"><strong class="price-value">2,50&nbsp;€</strong><small>pro Monat</small></div>
     </a>
 
-    <div>
-        <strong>Diese Seite ist kein offizielles Angebot des AC Einigkeit Elmshorn e.V. und dient nur zu Evaluationszwecken!</strong>
+    <div style="background-color: red; margin: 1rem; padding: 1rem; border-radius: 1em;">
+        <strong>Diese Seite ist kein offizielles Angebot des AC Einigkeit Elmshorn e.V. und dient nur zu
+            Evaluationszwecken!</strong>
     </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 p-5" style="max-width: 1000px;margin: 0 auto;">
+        <section class="card">
+            <h5 class="card-header">Boxtraining bis 12 Jahre</h5>
+            <img src="images/program-1.jpg" alt="Sportprogramm Kinder und Jugendliche">
+            <div class="card-body">
+                <p class="card-text">Einstündiges Boxtraining für Kinder und Jugendliche bis einschließlich 12 Jahren.
+                </p>
+            </div>
+            <div class="card-footer">
+                <div>Dienstag: 18:15 - 19:15 Uhr</div>
+                <div>Donnerstag: 18:15 - 19:15 Uhr</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h5 class="card-header">Boxtraining ab 13 Jahre</h5>
+            <img src="images/program-2.jpg" alt="Sportprogramm Erwachsene">
+            <div class="card-body">
+                <p class="card-text">Zweistündiges Boxtraining für Erwachsene und Jugendliche ab 13 Jahren.</p>
+            </div>
+            <div class="card-footer">
+                <div>Dienstag: 18:30 - 20:30 Uhr</div>
+                <div>Donnerstag: 19:00 - 21:00 Uhr</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h5 class="card-header">Fitnesstraining</h5>
+            <img src="images/program-3.jpg" alt="Sportprogramm Erwachsene">
+            <div class="card-body">
+                <p class="card-text">Altersgerechtes Kraft- und Fitnesstraining ohne Spezialisierung auf Boxtechniken.
+                </p>
+            </div>
+            <div class="card-footer">
+                <div>Dienstag: 18:30 - 20:30 Uhr</div>
+                <div>Donnerstag: 19:00 - 21:00 Uhr</div>
+            </div>
+        </section>
+    </div>
+
 </body>
 
 </html>
